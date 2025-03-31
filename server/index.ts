@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.use(cookieParser());
 
 const coreOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://food-app-adbk.onrender.com",
     credentials: true
 };
 app.use(cors(coreOptions));
