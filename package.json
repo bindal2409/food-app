@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-  "dev": "NODE_OPTIONS='--max-old-space-size=4096' nodemon server/index.ts",
-  "stripe": "stripe listen --forward-to localhost:8000/api/v1/order/webhook",
-  "build": "npm install && npm install --prefix client && npm run build --prefix client",
-  "start": "NODE_OPTIONS='--max-old-space-size=4096' nodemon server/index.ts"
-},
+    "dev": "cross-env NODE_OPTIONS=--max-old-space-size=4096 nodemon server/index.ts",
+    "stripe": "stripe listen --forward-to localhost:8000/api/v1/order/webhook",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "start": "cross-env NODE_OPTIONS=--max-old-space-size=4096 nodemon server/index.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "cloudinary": "^2.6.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "crypto": "^1.0.1",
     "crypto-js": "^4.2.0",
     "dotenv": "^16.4.7",
