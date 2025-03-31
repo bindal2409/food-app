@@ -188,7 +188,7 @@ export const generatePasswordResetEmailHtml = (resetURL: string) => {
               <p>We received a request to reset your password. Click the button below to reset it.</p>
               <a href="${resetURL}" class="button">Reset Password</a>
               <p>If you didn't request a password reset, please ignore this email.</p>
-              <p>Thank you,<br/>The Patel Food Team</p>
+              <p>Thank you,<br/>The Bindsl Food Team</p>
             </div>
             <div class="email-footer">
               <p>&copy; 2024 Patel Food. All rights reserved.</p>

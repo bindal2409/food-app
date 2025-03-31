@@ -169,8 +169,12 @@ export const forgotPassword = async (req: Request, res: Response): Promise<void>
 export const resetPassword = async (req: Request, res: Response): Promise<void> => {
     try {
         const { token } = req.params;
+        console.log("Received token:", token);  // Debugging log
         const { newPassword } = req.body;
+        console.log("New Password:", newPassword);  // Debugging log
         const user = await User.findOne({ resetPasswordToken: token, resetPasswordTokenExpiresAt: { $gt: Date.now() } });
+
+        console.log("User found:", user);  // Debugging log
 
         if (!user) {
             res.status(400).json({
